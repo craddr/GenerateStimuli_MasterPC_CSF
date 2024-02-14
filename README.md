@@ -13,11 +13,6 @@ Running the experiment:
 Run "rosieProtocol1(animalID, 1, bRosieTesting2023_1)" in MATLAB cmd line
 where animalID must be in format AAAA123. 
 
-Some codes here are written by others. All codes have contribution and authorship indicated within the first few lines 
-Notably, many of the codes are taken from Chris Burgess Rigbox (2013). Many codes are either written by, or based on those written by Adam Ranson (2014). 
-Hlp_serialize and hlp_deserialize functions were written by Christian Kothe, Swartz Center for Computational Neuroscience, UCSD (2010), and were based on those of Tim Hutt (2010). 
-
-The core experimental code was written by Rosie Craddock, 2024.
 
 To run this experiment with other visual stimuli:
 Change Pstate.stims{18} to change the drifttime (in seconds)
@@ -32,9 +27,27 @@ All other shape values give full screen gratings stimulus with no gaussian windo
 It square waveform=1 then the waveform is square, not a sine-wave, if =0, then is sine-wave.
 
 Changing Pstate.globalParamsVals in column 4 and 5 will change the intertrial intervals (in seconds). Column 4 sets the minimum inter trial interval, column 5 sets the maximal interval. In 2023 experiment of RC, both were set to =3, to give a constant iti of 3 seconds.
-Column 6 can be ignored, as this refers to the threshold value to record steering wheel movement for the behavioural + 2p experiment. This is the rotary encoder threshold movement value. This was set to 420 ticks in RC pilot experiment. Column 24 sets the number of times the experiment is repeated within a single experiment recording session. All other columns can be ignored as these refer to the settings for the original behavioural training experiment described in appendix ___. 
+Column 6 can be ignored, as this refers to the threshold value to record steering wheel movement for the behavioural + 2p experiment. This is the rotary encoder threshold movement value. This was set to 420 ticks in RC pilot experiment. Column 24 sets the number of times the experiment is repeated within a single experiment recording session. 
+
 TODO: 
 Create a GUI for creating minimised pFiles, containing only necessary parameters to be read into RosieNewlisten.m and rosie1daq.m and associated matlab files and functions. The GUI should describe each parameter completely. 
+
+
+Authorship and Contributions: 
+All codes have contribution and authorship indicated within the first few lines 
+Notably, many of the codes are taken from Chris Burgess Rigbox (2013). 
+Many codes are either written by, or based on those written by Adam Ranson (2014). 
+Hlp_serialize and hlp_deserialize functions were written by Christian Kothe, Swartz Center for Computational Neuroscience, UCSD (2010), and were based on those of Tim Hutt (2010). 
+
+The core experimental code was written by Rosie Craddock, 2024.
+
+
+Please cite as required on use of the codes in this repository: 
+Rigbox: an Open-Source Toolbox for Probing Neurons and Behavior
+Jai Bhagat, Miles J. Wells, Andrew Peters, Kenneth D Harris, Matteo Carandini, Christopher P Burgess
+bioRxiv 672204; doi: https://doi.org/10.1101/672204
+
+Christian Kothe (2024). Fast serialize/deserialize (https://www.mathworks.com/matlabcentral/fileexchange/34564-fast-serialize-deserialize), MATLAB Central File Exchange. Retrieved February 14, 2024.All other columns can be ignored as these refer to the settings for the original behavioural training experiment described in appendix ___. 
 
 
 
