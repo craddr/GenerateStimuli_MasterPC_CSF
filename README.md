@@ -19,3 +19,22 @@ Hlp_serialize and hlp_deserialize functions were written by Christian Kothe, Swa
 
 The core experimental code was written by Rosie Craddock, 2024.
 
+To run this experiment with other visual stimuli:
+Change Pstate.stims{18} to change the drifttime (in seconds)
+Change Pstate.stims{13} to change gratings orientation (in degrees)
+Change Pstate.stims{12} to change contrast (1=100%)
+Check the Pstate.params to and use approp columns specified there to change position and size of stimulus in pixels, or temporal frequency, where tf= temporal frequency in Hz, duty can be changed, shape and square waveform can be set, all other parameters are currently fixed. 
+Shape=1 means sinewave grating with no gaussian window 
+Shape=2 means sinewave grating with gaussian window 
+Shape=3 can be ignored. 
+Shape=4 means full screen window with gaussian window
+All other shape values give full screen gratings stimulus with no gaussian window.
+It square waveform=1 then the waveform is square, not a sine-wave, if =0, then is sine-wave.
+
+Changing Pstate.globalParamsVals in column 4 and 5 will change the intertrial intervals (in seconds). Column 4 sets the minimum inter trial interval, column 5 sets the maximal interval. In 2023 experiment of RC, both were set to =3, to give a constant iti of 3 seconds.
+Column 6 can be ignored, as this refers to the threshold value to record steering wheel movement for the behavioural + 2p experiment. This is the rotary encoder threshold movement value. This was set to 420 ticks in RC pilot experiment. Column 24 sets the number of times the experiment is repeated within a single experiment recording session. All other columns can be ignored as these refer to the settings for the original behavioural training experiment described in appendix ___. 
+TODO: 
+Create a GUI for creating minimised pFiles, containing only necessary parameters to be read into RosieNewlisten.m and rosie1daq.m and associated matlab files and functions. The GUI should describe each parameter completely. 
+
+
+
